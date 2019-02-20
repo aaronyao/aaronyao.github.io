@@ -5,8 +5,9 @@ meta_description: "云、数据科学、产品设计、和效率"
 markdown: kramdown
 highlighter: pygments
 logo: false
-paginate: 15
+paginate: 3
 baseurl: /
+abouturl: about.html
 domain_name: 'http://yourblog-domain.com'
 google_analytics: 'UA-XXXXXXXX-X'
 gems: [jekyll-paginate]

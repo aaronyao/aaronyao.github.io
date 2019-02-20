@@ -4,8 +4,10 @@ post_class: post-template page-template
 ---
 
 <nav class="main-nav clearfix">
-    <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
-    <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
+    <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">主页</a>
+    {% if site.abouturl!='' %}
+        <a class="about-button icon-meh-blank" href='{{ site.baseurl }}{{ site.abouturl }}'>关于我</a>
+    {% endif %}
 </nav>
 
 
