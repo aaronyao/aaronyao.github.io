@@ -10,8 +10,8 @@ domain_name: 'http://yourblog-domain.com'
 google_analytics: 'UA-XXXXXXXX-X'
 gems: [jekyll-paginate]
 
-baseurl: /
-abouturl: about.html
+baseurl: ''
+abouturl: /about.html
 permalink: /:title:output_ext
 
 # Details for the RSS feed generator
