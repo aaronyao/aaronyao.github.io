@@ -129,41 +129,33 @@ table { border-collapse: collapse; border-spacing: 0; }
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Each icon is created by inserting the correct character into the
-   content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-    content: "\f600";
+.icon-home:before {
+  content: "\e900";
 }
-.icon-feed:before {
-    content: "\f601";
+.icon-qrcode:before {
+  content: "\e938";
 }
-.icon-twitter:before {
-    content: "\f602";
-    font-size: 1.1em;
+.icon-compass:before {
+  content: "\e949";
 }
-.icon-google-plus:before {
-    content: "\f603";
-}
-.icon-facebook:before {
-    content: "\f604";
-}
-.icon-arrow-left:before {
-    content: "\f605";
-}
-.icon-stats:before {
-    content: "\f606";
-}
-.icon-location:before {
-    content: "\f607";
-    margin-left: -3px; /* Tracking fix */
+.icon-stats-bars:before {
+  content: "\e99c";
 }
 .icon-link:before {
-    content: "\f608";
+  content: "\e9cb";
 }
-.icon-meh-o:before {
-    content: "\f11a";
+.icon-cool:before {
+  content: "\e9eb";
 }
-
+.icon-arrow-left2:before {
+  content: "\ea40";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-soundcloud:before {
+  content: "\eac3";
+}
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
@@ -694,6 +686,19 @@ margin on the iframe, cause it breaks stuff. */
 .no-cover .page-description {
     color: rgba(0,0,0,0.5);
 }
+.no-cover .page-description a {
+	color: rgba(0,0,0,0.5);
+	text-decoration: none;
+}
+.no-cover .page-description a:hover {
+	text-decoration: underline;
+}
+.no-cover .page-description li {
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline; 
+}
 
 .no-cover .main-nav.overlay .back-button,
 .no-cover .main-nav.overlay .about-button {
@@ -798,8 +803,7 @@ body:not(.post-template) .post-title {
 
 .post-date {
     display: inline-block;
-    margin-right: 8px;
-    padding-right: 12px;
+    padding-right: 10px;
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;

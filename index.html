@@ -11,18 +11,16 @@ title: Home
                 </a>
             {% endif %}
 	{% if site.abouturl!='' %} 
-		<a class="about-button icon-feed" href='{{ site.baseurl }}{{ site.abouturl }}'>关于我</a> 
+		<a class="about-button icon-cool" href='{{ site.baseurl }}{{ site.abouturl }}'>关于我</a> 
 	{% endif %}
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">{{ site.name }}</h1>
-            <h2 class="page-description">
-                {% if site.description %} {{ site.description }}{% endif %}
-            </h2>
+            <h2 class="page-description"> {% if site.description %} {{ site.description }}{% endif %}</h2>
         </div>
     </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    <a class="scroll-down icon-arrow-left2" href="#content" data-offset="-45"><span class="hidden">向下滚动</span></a>
 </header>
 
 
