@@ -14,11 +14,5 @@ domain_name: 'aaronyao.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
 gems: [jekyll-paginate]
 
-# Share
-social-share: true
-social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
-
-# Details for the RSS feed generator
-url:            'https://'
-author:         '姚关伟'
-
+# Auth info
+author: '姚关伟'

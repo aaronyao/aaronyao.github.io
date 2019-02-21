@@ -73,15 +73,14 @@ post_class: post-template
                     <!-- Author Name -->
                     <h4> {{ site.author }} </h4>
                     <!-- Author Bio -->
-                    <p>
-                        上能PPT,下能搬砖.
-                    </p>
+                    <p>上能PPT，下能搬砖。</p>
                 </section>
             {% endif %}
 
-            <!-- Share links section -->
-            {% include share.html %}
-
+			<section class="declare">
+				<span>保持署名，可自由转载。参见<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">创意共享3.0许可证</a></span>
+			</section>
+			
             <!-- Disqus comments -->
             {% if page.disqus %}
                 {% include disqus.html %}
