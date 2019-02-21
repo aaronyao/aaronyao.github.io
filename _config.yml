@@ -2,17 +2,17 @@ name: 慢摇哥哥的博客
 description: 云、数据科学、产品设计、和效率
 meta_description: "云、数据科学、产品设计、和效率"
 
+baseurl: ''
+abouturl: about.html
+permalink: /:title:output_ext
+
 markdown: kramdown
 highlighter: pygments
 logo: false
 paginate: 4
-domain_name: 'http://yourblog-domain.com'
+domain_name: 'aaronyao.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
-gems: [jekyll-paginate,jekyll-github-metadata]
-
-baseurl: /
-abouturl: about.html
-permalink: /:title:output_ext
+gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
 url:            'https://'
