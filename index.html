@@ -44,7 +44,7 @@ title: Home
                 {{ post.date | date: "%Y-%m-%d" }}
             </time> 
             {% if post.categories.size > 0 %} 
-                {{ post.categories | array_to_sentence_string: "、" | prepend: '' }} 
+                {{ post.categories | join: "、" }} 
             {% endif %}
         </footer>
     </article>

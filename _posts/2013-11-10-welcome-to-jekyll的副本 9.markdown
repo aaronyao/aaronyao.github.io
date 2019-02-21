@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-categories: [DevOps,云,持续集成,数据挖掘]
+categories: [DevOps,数据挖掘,持续集成,数据建模]
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
