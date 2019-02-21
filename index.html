@@ -6,12 +6,12 @@ title: Home
 <header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
     <nav class="main-nav overlay clearfix">
             {% if page.logo %}
-                <a class="blog-logo" href="{{ site.baseurl | relative_url }}">
+                <a class="blog-logo" href="{{ "/" | relative_url }}">
                     <img src="{{ page.logo }}" alt="Blog Logo" />
                 </a>
             {% endif %}
 	{% if site.abouturl!='' %} 
-		<a class="about-button icon-cool" href='{{ site.baseurl | relative_url }}{{ site.abouturl }}'>关于我</a> 
+		<a class="about-button icon-cool" href='{{ site.abouturl | relative_url }}'>关于我</a> 
 	{% endif %}
     </nav>
     <div class="vertical">
