@@ -66,7 +66,7 @@ body {
 	margin: 0; 
     font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: rgb(51, 51, 51);
-	line-height: 1.6;
+	line-height: 1.6em;
 }
 a { background: transparent; }
 a:focus { outline: thin dotted; }
@@ -201,9 +201,8 @@ body {
     height: 100%;
     max-height: 100%;
     letter-spacing: 0.01rem;
-    font-size: 1.6rem;
+    font-size: 1.6em;
     line-height: 1.6em;
-    color: #3A4145;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
@@ -217,52 +216,91 @@ body {
     background: #D6EDFF;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
-    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    color: #2E2E2E;
-    line-height: 1.15em;
-    margin: 0 0 0.4em 0;
-}
-
 h1 {
     font-size: 5rem;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
-h2 {
-    font-size: 3.6rem;
-    letter-spacing: -1px;
-}
-
-h3 {
-    font-size: 3rem;
-}
-
-h4 {
-    font-size: 2.5rem;
-}
-
-h5 {
-    font-size: 2rem;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-    font-size: 2rem;
+    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
 }
-
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
 a {
-    color: #4A4A4A;
+	color: #4A4A4A;
     transition: color ease 0.3s;
 }
-
 a:hover {
     color: #111;
 }
-
 p, ul, ol, dl {
     -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
@@ -775,7 +813,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 body:not(.post-template) .post-title {
-    font-size: 3.6rem;
+    font-size: 2.8rem;
 }
 
 .post-title a {
@@ -794,7 +832,7 @@ body:not(.post-template) .post-title {
 
 .post-meta {
     display: block;
-    margin: 1.75rem 0 0 0;
+    margin: 0.75rem 0 0 0;
     font-size: 1.3rem;
     line-height: 2.2rem;
     color: #9EABB3;
@@ -847,6 +885,13 @@ body:not(.post-template) .post-title {
     max-width: 440px;
     font-size: 1.4rem;
     line-height: 1.5em;
+}
+
+
+.post-image {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .publish-meta {
@@ -985,7 +1030,7 @@ body:not(.post-template) .post-title {
     position: absolute;
     top: 5rem;
     right: 0;
-    width: 180px;
+    width: 200px;
 }
 
 .post-footer .declare h5,
@@ -1406,10 +1451,6 @@ body:not(.post-template) .post-title {
         font-size: 0.95em
     }
 
-    body:not(.post-template) .post-title {
-        font-size: 3.2rem;
-    }
-
     hr {
         margin: 2.4em 0;
     }
@@ -1418,30 +1459,6 @@ body:not(.post-template) .post-title {
         padding-left: 2em;
     }
 
-    h1 {
-        font-size: 4.5rem;
-        text-indent: -2px;
-    }
-
-    h2 {
-        font-size: 3.6rem;
-    }
-
-    h3 {
-        font-size: 3.1rem;
-    }
-
-    h4 {
-        font-size: 2.5rem;
-    }
-
-    h5 {
-        font-size: 2.2rem;
-    }
-
-    h6 {
-        font-size: 1.8rem;
-    }
 
     .author-profile {
         padding-bottom: 4rem;
