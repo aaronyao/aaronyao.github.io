@@ -1622,7 +1622,7 @@ body:not(.post-template) .post-title {
     }
 
     .post-excerpt p {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .page-description {
