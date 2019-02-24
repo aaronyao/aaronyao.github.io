@@ -201,7 +201,7 @@ body {
     height: 100%;
     max-height: 100%;
     letter-spacing: 0.01rem;
-    font-size: 1.6em;
+    font-size: 1.3em;
     line-height: 1.6em;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
@@ -272,26 +272,26 @@ h6 code {
 }
 h1 {
     padding-bottom: .3em;
-    font-size: 2.25em;
+    font-size: 2.2em;
     line-height: 1.2;
 }
 h2 {
    padding-bottom: .3em;
-    font-size: 1.75em;
+    font-size: 2.0em;
     line-height: 1.225;
 }
 h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     line-height: 1.43;
 }
 h4 {
-    font-size: 1.25em;
+    font-size: 1.6em;
 }
 h5 {
-    font-size: 1em;
+    font-size: 1.4em;
 }
 h6 {
-   font-size: 1em;
+   font-size: 1.2em;
     color: #777;
 }
 a {
@@ -440,15 +440,20 @@ table {
     max-width: 100%;
     background-color: transparent;
 }
-
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
 table th,
 table td {
     padding: 8px;
     line-height: 20px;
     text-align: left;
     vertical-align: top;
-    border-top: #EFEFEF 1px solid;
+    border: 1px solid #dfe2e5;
 }
+
 
 table th { color: #000; }
 
@@ -635,7 +640,7 @@ margin on the iframe, cause it breaks stuff. */
     border: transparent 1px solid;
     color: #9EABB3;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     line-height: 35px;
     border-radius: 3px;
@@ -661,7 +666,7 @@ margin on the iframe, cause it breaks stuff. */
     border: transparent 1px solid;
     color: #9EABB3;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     line-height: 35px;
     white-space: nowrap;
@@ -670,7 +675,7 @@ margin on the iframe, cause it breaks stuff. */
     transition: all ease 0.3s;
 }
 .about-button:before {
-    font-size: 9px;
+    font-size: 13px;
     margin-right: 6px;
 }
 
@@ -813,7 +818,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 body:not(.post-template) .post-title {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
 }
 
 .post-title a {
@@ -966,9 +971,10 @@ body:not(.post-template) .post-title {
 /* Break out larger images to be wider than the main text column
    the class is applied with jQuery */
 .post-content .full-img {
-    width: 126%;
+    /*width: 126%;*/
+    width: 100%;
     max-width: none;
-    margin: 0 -13%;
+    /*margin: 0 -13%;*/
 }
 
 /* The author credit area after the post */
@@ -1629,33 +1635,33 @@ body:not(.post-template) .post-title {
     }
 
     h1 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
         letter-spacing: -1px;
     }
 
     h2 {
-        font-size: 2.4rem;
+        font-size: 2.0rem;
         letter-spacing: 0;
     }
 
     h3 {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
 
     h4 {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
 
     h5 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     h6 {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 
     body:not(.post-template) .post-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .post-template .post {
@@ -1672,9 +1678,9 @@ body:not(.post-template) .post-title {
     }
 
     .post-content .full-img {
-        width: auto;
-        width: calc(100% + 32px); /* expand with to image + margins */
-        margin: 0 -16px; /* get rid of margins */
+/*        width: auto;*/
+/*        width: calc(100% + 32px); */ /* expand with to image + margins */
+/*        margin: 0 -16px; */ /* get rid of margins */ 
         min-width: 0;
         max-width: 112%; /* fallback when calc doesn't work */
     }

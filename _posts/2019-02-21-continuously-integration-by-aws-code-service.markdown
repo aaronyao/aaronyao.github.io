@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用AWS Code服务构建持续集成环境"
-categories: 持续集成 AWS CodeBuild CodeDeploy
+categories: 持续集成 AWS CodePipeline
 typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 ---
 在做了多年的软件开发和技术管理工作后，发现很多团队仍然停留在手工作坊的阶段，还没有踏上IT自动化这条路，这是一定需要去改善的。
@@ -31,21 +31,32 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 - 向整个团队展示持续集成的过程和结果（构建一个Dashboard）。
 
 ##### 持续交付和持续部署
-持续集成，是发生在项目版本的研发周期内（一次交付内）。注重尽早的提交代码，与开发团队进行代码层面的协同，尽早发现和修正问题。
+持续集成发生在新项目或项目某个版本的研发周期内（一次交付内），要求开发者尽早提交代码，与开发团队进行代码层面的协同，提前发现代码集成的问题。
 
-持续集成完成后，软件达到了一种`待验证`的状态。在整个软件的研发周期中，还会有一些后续工作，包括在不同环境进行QA，配置部署等阶段。所以，伴随持续集成，后续还有两个实践，持续交付和持续部署，
+持续集成完成后，软件达到了一种`待验证`的状态。在整个软件的研发周期中，还会有一些后续工作，包括在不同环境进行QA测试，配置部署等阶段。所以，伴随持续集成，后续还有两个实践，持续交付和持续部署，
 
 - **持续交付**是指代码完成持续集成后，自动化地把代码部署到不同环境（testing/staging）进行测试和验证，最终让代码达到一种`可交付`的状态； 
 - **持续部署**是在持续交付的基础上，把生产环境部署的过程自动化。
 
+下图解释了CI/CD在软件开发各周期上跨度的不同，
+
 ![CI/CD](/assets/images/cicd-phase.png)
 
-#####  AWS Code服务介绍 
-- Code* 服务
-- CodeCommit
-- CodeBuild
-- CodeDeploy
-- CodePipeline
+#####  AWS Code服务 
+
+通常，持续集成中用的的比较流行的工具，都有以下这些，
+
+| Source control | Build | Test | Deploy | Orchestrate |
+|--------------|-----|----|------|------|
+| Github | mvn | xxx | bash | Jenkins Pipeline |
+| Github | mvn | xxx | bash | Jenkins Pipeline |
+
+
+AWS除了云自身产品外，还自研了一系列的[开发者工具](https://amazonaws-china.com/products/developer-tools/)，从IDE，源代码服务器，代码构建工具，部署工具，以及CI/CD用到的Pipeline，基本上是从头到尾都干了一遍，可见AWS的未雨绸缪和野心。
+
+| Source control | Build | Test | Deploy | Orchestrate |
+|--------------|-----|----|------|------|
+| CodeCommit | CodeBuild | 3rd party | CodeDeploy | CodePipeline |
 
 #####  案例
 - Github托管源代码
