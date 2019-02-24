@@ -827,7 +827,7 @@ body:not(.post-template) .post-title {
 
 .post-excerpt p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1.7em;
 }
 
@@ -1622,7 +1622,7 @@ body:not(.post-template) .post-title {
     }
 
     .post-excerpt p {
-        font-size: 0.85em;
+        font-size: 1em;
     }
 
     .page-description {
