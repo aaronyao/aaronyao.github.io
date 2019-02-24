@@ -1613,7 +1613,7 @@ body:not(.post-template) .post-title {
     }
 
     p, ul, ol, dl {
-        font-size: 0.95em;
+        font-size: 1.2em;
         margin: 1.25rem 0;
     }
 
@@ -1635,29 +1635,29 @@ body:not(.post-template) .post-title {
     }
 
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
         letter-spacing: -1px;
     }
 
     h2 {
-        font-size: 2.0rem;
+        font-size: 2.2rem;
         letter-spacing: 0;
     }
 
     h3 {
-        font-size: 1.8rem;
+        font-size: 2.0rem;
     }
 
     h4 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     h5 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     h6 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     body:not(.post-template) .post-title {
