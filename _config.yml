@@ -16,3 +16,7 @@ gems: [jekyll-paginate]
 
 # Auth info
 author: '姚关伟'
+
+# For development
+host: 0.0.0.0
+port: 80

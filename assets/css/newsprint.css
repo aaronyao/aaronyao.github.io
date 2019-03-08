@@ -169,27 +169,27 @@ table { border-collapse: collapse; border-spacing: 0; }
     font-family: 'PT Serif';
     font-style: normal;
     font-weight: normal;
-    src: local('PT Serif'), local('PTSerif-Regular'), url('../fonts/pt-serif-v9-latin-regular.woff') format('woff');
+    src: local('PT Serif'), local('PTSerif-Regular'), url('./newsprint/pt-serif-v9-latin-regular.woff') format('woff');
 }
 @font-face {
     font-family: 'PT Serif';
     font-style: italic;
     font-weight: normal;
-    src: local('PT Serif'), local('PTSerif-Italic'), url('../fonts/pt-serif-v9-latin-italic.woff') format('woff');
+    src: local('PT Serif'), local('PTSerif-Italic'), url('./newsprint/pt-serif-v9-latin-italic.woff') format('woff');
 }
 
 @font-face {
     font-family: 'PT Serif';
     font-style: normal;
     font-weight: bold;
-    src: local('PT Serif'), local('PTSerif-Bold'), url('../fonts/pt-serif-v9-latin-700.woff') format('woff');
+    src: local('PT Serif'), local('PTSerif-Bold'), url('./newsprint/pt-serif-v9-latin-700.woff') format('woff');
 }
 
 @font-face {
     font-family: 'PT Serif';
     font-style: italic;
     font-weight: bold;
-    src: local('PT Serif'), local('PTSerif-BoldItalic'), url('../fonts/pt-serif-v9-latin-700italic.woff') format('woff');
+    src: local('PT Serif'), local('PTSerif-BoldItalic'), url('./newsprint/pt-serif-v9-latin-700italic.woff') format('woff');
 }
 
 :root {
@@ -209,27 +209,14 @@ pre {
 	--select-text-font-color: #fff;
 }
 
-
 html {
 	font-size: 16px;
-    height: 100%;
-    max-height: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);	
 }
 
 html, body {
 	font-family: "PT Serif", 'Times New Roman', Times, serif;
 	color: #1f0909;
 	line-height: 1.5em;
-}
-
-body {
-    height: 100%;
-    max-height: 100%;
-    letter-spacing: 0.01rem;
-    -webkit-font-feature-settings: 'kern' 1;
-    -moz-font-feature-settings: 'kern' 1;
-    -o-font-feature-settings: 'kern' 1;
 }
 
 /*#write {
@@ -987,17 +974,19 @@ a:hover {
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
     margin: 10px 0 10px 0;
-    font-size: 3rem;
+    font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
+    font-family: "Open Sans", sans-serif;
     color: #fff;
 }
 
 .page-description {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
+    font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }
@@ -1623,7 +1612,7 @@ body:not(.post-template) .post-title {
     padding: 0.5rem 15px;
     border-top: #EBF2F6 1px solid;
     font-family: "Open Sans", sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
 }
@@ -1689,12 +1678,12 @@ body:not(.post-template) .post-title {
     }
 
     .page-title {
-        font-size: 2.6rem;
+        font-size: 4rem;
         letter-spacing: -1px;
     }
 
     .page-description {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         line-height: 1.5em;
     }
 
@@ -1712,6 +1701,31 @@ body:not(.post-template) .post-title {
 
     ol, ul {
         padding-left: 2em;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        text-indent: -2px;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+    }
+
+    h3 {
+        font-size: 3.1rem;
+    }
+
+    h4 {
+        font-size: 2.5rem;
+    }
+
+    h5 {
+        font-size: 2.2rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
     }
 
     .author-profile {
@@ -1875,7 +1889,7 @@ body:not(.post-template) .post-title {
     }
 
     .page-title {
-        font-size: 2.6rem;
+        font-size: 3rem;
     }
 
     .post-excerpt p {
@@ -1889,6 +1903,32 @@ body:not(.post-template) .post-title {
     h1, h2, h3,
     h4, h5, h6 {
         margin: 0 0 0.3em 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        letter-spacing: 0;
+    }
+
+    h3 {
+        font-size: 2.1rem;
+    }
+
+    h4 {
+        font-size: 1.9rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
     }
 
     body:not(.post-template) .post-title {
