@@ -8,7 +8,7 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 
 大数据是一系列更快更有效挖掘数据价值的相关技术。与传统的数据处理（OLTP/OLAP）相比，大数据有更长的生命周期，周期中的每个阶段都有不同的技术体系和工作目标，大数据处理主要分为四个阶段：<i>数据采集，数据存储，分析处理，和数据运用</i>。
 
-![CI/CD](/assets/images/data-process-flow.png)
+![data process flow](/assets/images/data-process-flow.png)
 
 #### 数据采集
 
@@ -18,7 +18,7 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 
 - 用户访问行为数据，如Web上的点击统计，APP上的各类埋点；
 - 服务端日志数据，包括系统日志、访问日志等各类日志文件；
-- 外部数据，泛指未能预先进行设计干预的数据，如爬虫抓取取回来网页等；
+- 外部数据，泛指未能预先进行设计干预的数据，如爬虫抓取取回来网页等。
 
 数据采集的核心工作是在"集"上，通常叫做**数据集成**，集成的过程包括，
 
@@ -80,10 +80,10 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 
 传统的运用主要集中在BI及数据可视化领域，现在大数据和机器学习的结合，已成为解决以下领域问题的关键技术：
 
-- 金融，用于信用评估和算法交易
-- 图像处理和计算机视觉，用于人脸识别、运动检测和对象检测
-- 生物，用于肿瘤检测、药物发现和 DNA 序列分析
-- 自然语言处理，用于语音识别相关运用
+- 金融，用于信用评估和算法交易；
+- 图像处理和计算机视觉，用于人脸识别、运动检测和对象检测；
+- 生物，用于肿瘤检测、药物发现和 DNA 序列分析；
+- 自然语言处理，用于语音识别相关运用。
 
 曾经，算法被认为是实现**人工智能**的关键，而如今，大数据和机器学习占据了主导地位。
 
@@ -94,7 +94,7 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 - 数据科学家，负责模型设计，偏学术化；
 - 数据挖掘工程师，负责数据收集，ETL，模型工程化，和算法实现；
 - 数据产品经理，结合业务数据和行业数据，规划和设计产品；
-- 数据分析师，结合业务数据和行业数据，形成分析报表，辅助决策层；
+- 数据分析师，结合业务数据和行业数据，形成分析报表，辅助决策层。
 
 未来，随着云的进一步渗透，和大数据的广泛运用，首当其冲的一定是数据的安全和用户隐私问题，所以未来也也会产生很多和云、数据安全的相关岗位。
 
@@ -104,4 +104,6 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 
 最后，把所有处理过程放在一起，可更清楚地认识大数据。
 
-![CI/CD](/assets/images/big-data-picture.png)
+![big data picture](/assets/images/big-data-picture.png)
+
+（END）
