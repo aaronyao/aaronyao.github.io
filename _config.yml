@@ -11,7 +11,7 @@ highlighter: pygments
 logo: false
 paginate: 4
 domain_name: 'aaronyao.github.io'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-135953860-1'
 gems: [jekyll-paginate]
 
 # Auth info
