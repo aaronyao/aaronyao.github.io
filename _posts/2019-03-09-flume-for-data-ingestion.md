@@ -43,11 +43,11 @@ Flume的这种Source-Channel-Sink的设计模式，让每个组件都保持职�
 - 灵活性，通过配置就可以现有适应复杂的系统架构；
 - 分布式Agent，无中心化问题。
 
-同一种数据协议两个Agent，可以首尾相连，让数据能够流动起来，
+相同数据协议的两个Agent，可以首尾相连，让数据能够流动起来，
 
 ![setting multiple agent flow](/assets/images/flume-setting-multiple-agent-flow.png)
 
-这个特性在实际的场景中得到了广泛的运用。例如，上百台Web实例上都运行了Flume Agent用于Web访问日志的采集，通过Agent的连接把数据汇聚到小部分的Agent，最终通过这小部分的Agent（HDFS Sink）写入到HDFS存储中。
+这个特性在实际的场景中得到了广泛的运用。例如，上百台Web实例上都运行了Flume Agent用于Web访问日志的采集，通过连接Agent，把数据汇聚到小部分的Agent，最终通过这小部分的Agent（HDFS Sink）写入到HDFS存储中。
 
 ![consolidation](/assets/images/flume-consolidation.png)
 
@@ -65,7 +65,7 @@ Channel的可靠性和可恢复性决定了Flume的可靠性。目前Channel有�
 2. 本地文件（宕机后数据不可访问）；
 3. Kafka Channel（高可用）；
 
-所以，Flume结合Kafka Channel，解决对有数据有HA要求的场景，
+利用Kafka作为Flume的Channel，可以获得Kafka的高可用特性，解决对有数据有高可用要求的场景，
 
 ![flume with kafka channel](/assets/images/flume-with-kafka-channel.png)
 
@@ -73,9 +73,9 @@ Channel的可靠性和可恢复性决定了Flume的可靠性。目前Channel有�
 
 实际运用中常常看到Flume和Kafka同时出现。
 
-Kafka除了可以作为Flume的Channel来增加可靠性。同时，由于Flume提供了支持Kafka的Source和Sink，所以Flume也常作为Kafka消息的生产者或者消费者，主要是两大场景，
+Kafka除了可以作为Flume的Channel来增加可靠性。同时，由于Flume提供了支持Kafka的Source和Sink，所以Flume也常作为Kafka消息的生产者和消费者，
 
-- 使用Flume来采集不同的数据源，同时作为Kafka消息的Producer，将数据实时推送到Kafka中，让Kafka的实时流计算；
+- 使用Flume来采集不同的数据源，同时作为Kafka消息的Producer，将消息实时投递到Kafka中。后续，Kafka可以把消息推送给实时流计算框架或其他的Consumer；
 ![flume as kafka producer](/assets/images/flume-as-kafka-producer.png)
 
 - Kafka作为一个高可用的消息中间件，充当了一个消息池，常用于消除消息生产端和消费端速度的差异，解除两端的依赖性。 再利用Flume Sink将数据下沉到存储系统。
