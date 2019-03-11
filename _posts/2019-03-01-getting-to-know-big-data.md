@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "认识大数据"
-categories: 大数据 数据挖掘
+categories: 大数据 数据采集 数据存储 数据挖掘
 typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 ---
 伴随移动互联网、IoT和5G的发展，数字世界的数据体量正在发生爆炸性增长，已经迈入了用ZB（`1 Zettabyte = 1024 * 1024 * 1024 TB`）这个单位来计量的时代。据IDC统计，在这些数据中超过95%的数据是无关联非结构化数据，这意味着如果不对这些数据加以挖掘和整理，即使使用云存储下来，它们也毫无价值，会和时间一样流逝。
