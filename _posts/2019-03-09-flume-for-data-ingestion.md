@@ -82,8 +82,8 @@ Kafka除了可以作为Flume的Channel来增加可靠性。同时，由于Flume�
 ![flume as kafka consumer](/assets/images/flume-as-kafka-consumer.png)
 
 #### 参考
-
 - https://flume.apache.org/FlumeUserGuide.html
+- https://blog.cloudera.com/blog/2014/11/flafka-apache-flume-meets-apache-kafka-for-event-processing/
 
-（END）
+(END)
 
