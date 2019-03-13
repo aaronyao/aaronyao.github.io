@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Kafka分布式数据平台"
-categories: Kafka Streaming
+categories: Kafka pubsub Streaming
 typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 ---
 [Kafka](https://kafka.apache.org)即可作为系统集成的消息中间件和数据存储系统，提供发布订阅和数据存储能力，也可作为流数据的实时计算平台。
@@ -81,7 +81,7 @@ pubsub可以广播消息到多个Consumer Group，在一个Group内保证每个�
 
 #### 参考
 
-- https://kafka.apache.org/intro
+- [https://kafka.apache.org/intro](https://kafka.apache.org/intro)
 - [Introducing Kafka Streams: Stream Processing Made Simple](https://www.confluent.io/blog/introducing-kafka-streams-stream-processing-made-simple/)
 
 (END)
