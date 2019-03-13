@@ -1,4 +1,4 @@
-name: 慢摇哥哥的博客
+title: 慢摇哥哥的博客
 description: 数据科学、和产品设计
 meta_description: "数据科学、产品设计、云、和效率"
 
@@ -9,10 +9,10 @@ permalink: /:title:output_ext
 markdown: kramdown
 highlighter: pygments
 logo: false
-paginate: 4
+paginate: 10
 domain_name: 'aaronyao.github.io'
 google_analytics: 'UA-135953860-1'
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # Auth info
 author: '姚关伟'
