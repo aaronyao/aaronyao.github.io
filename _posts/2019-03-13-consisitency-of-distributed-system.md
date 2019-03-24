@@ -130,8 +130,6 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 
 另外，对于数据库系统，Master和Slave之间也可以设置为异步同步模式，那这个时候整个数据库系统也满足最终一致性。
 
-最终一致性
-
 ##### 区别于ACID一致性
 
 ACID中的一致性是指DBMS中的一次事务操作（事务中包含了一些列的读写操作），在执行前和执行后，需要保障业务数据的完整性和系统预设的约束。简单来讲就是要么全部成功，要么全部失败。
