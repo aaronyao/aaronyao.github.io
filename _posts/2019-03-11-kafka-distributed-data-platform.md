@@ -9,7 +9,7 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 #### Kafka Cluster
 Kafka集群由一个ZooKeeper服务和无数的Broker节点构成，
 ![kafka cluster](/assets/images/kafka-cluster.png)
-- **ZooKeeper**，是一个独立运行于Kafka外部的服务，它为分布式应用程序提供高性能的协调服务，使其更容易的解决分布式一致性、Leader选举等分布式系统的核心问题；
+- **ZooKeeper**，是一个独立运行于Kafka外部的服务，它为分布式应用程序提供高性能的协调服务，包括Leader选举、分布式锁、以及集中配置等分布式系统的核心问题；
 - **Broker**，Kafka服务节点，也是消息的存储节点。
 
 Kafka的消息数据以Topic的形式进行分类，同一个Topic的数据，物理存储上还会进行Partition（数据分片）。
