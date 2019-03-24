@@ -33,7 +33,7 @@ typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
 
 - **Peer-to-peer** 
 
-  P2P架构，可以从任意节点进行读写，节点与节点之间进行数据的广播复制。
+  P2P架构（也叫Leaderless），可以从任意节点进行读写，节点与节点之间进行数据的广播复制。
 
   优点：消除了Master的中心化问题，更好的容错性；
 
