@@ -185,7 +185,7 @@ Quorum的读写数可以用来作为系统读写性能的一个调节参数。W�
 
 ##### 高可用性引入的写入冲突
 
-最终一致性让系统可以获得更好的可用性和性能。但同时还会引入一些新问题，比如多写（Multi-Source）问题，允许系统有多个接受写入的节点，进一步提高了系统的可用性。但多写不仅会让系统设计更加复杂，并行写入还会造成数据冲突。
+最终一致性让系统可以获得更好的可用性和性能。但同时也引入一些新问题，其中之一就是并行多写（Multi-Source）导致的数据冲突问题。
 
 例如，以MySQL Master-Slave为代表的数据库架构，大部分的使用场景是，一个写入节点（Master），Master同步给多个Slave，所有同步的binlog都会在各个Slave节点上串行地顺序执行，不存在并行写入冲突。然而，在如下图多Master的场景下，Client2和Client3同时修改了Master1和Master2上的同一条数据，并且Master1想把新值Val1同步给Master2，由于Master1和Master2缺乏全局时钟，从逻辑上这两个操作是无法比较先后的，
 
@@ -206,6 +206,8 @@ Quorum的读写数可以用来作为系统读写性能的一个调节参数。W�
 ![DynamoDB detect conflict by vector clock](/assets/images/consistency-dynamodb-vector-clock.png)
 
 如AWS DynomoDB使用*[Vector Clock](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf)*来检测多节点的并行写入冲突。Client2和Client3分别并行写入Node2和Node3时，通过对数据上的向量`([N1,1], [N2, 1])`,` ([N1,1], [N3, 1])`的比较，无法确定两者先后，这就检测到了冲突。于是启动冲突调和逻辑，DynamoDB也提供了类似LWW等一些自动调和算法，并支持让客户来设计调和逻辑。
+
+多写进一步提高系统的可用性，但需要解决数据冲突，同时也使得系统设计更加复杂。
 
 #### 总结
 
