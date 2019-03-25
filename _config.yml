@@ -15,7 +15,7 @@ google_analytics: 'UA-135953860-1'
 plugins: [jekyll-paginate]
 
 # Auth info
-author: '姚关伟'
+author: 'Aaron Yao'
 
 # For development
 host: 0.0.0.0
