@@ -13,6 +13,7 @@ body {
   </style>
 </head>
 <body>
+<div id="container">
 <!-- Topic Title -->
 <div class="card topic-card">
     <div class="card-header text-white bg-info">
@@ -52558,42 +52559,119 @@ body {
     </div>
 </div>
 <!-- / Question  -->
-
+</div>
 <script>
-window.onload = (function() {
+	function savePageState() {
+		// load local storage
+		var answer_map;
+		if(localStorage.answer_map) {
+			answer_map = new Map(JSON.parse(localStorage.answer_map));
+		}
+		else {
+			answer_map = new Map();
+		}
+		
+	    var answer_inputs = document.getElementsByClassName('answer_input');
+		for(var i=0; i<answer_inputs.length; i++) {
+			input = answer_inputs[i];
+			if(input.value) {
+				answer_map.set(input.id, input.value);
+			}
+			else{
+				answer_map.delete(input.id);
+			}
+		}
 
-    answer_p_list = document.getElementsByClassName('question-answer');
-    for(var i=0; i<answer_p_list.length; i++) {
-        p = answer_p_list[i];
-		// hide answer
-        p.style.opacity = 0;
+		localStorage.answer_map = JSON.stringify(Array.from(answer_map.entries()));
+	}
+	
+	function restorePageState() {
+		if(localStorage.answer_map == null) return;
 		
-		// add input box
-		var div = document.createElement('div');  
-		var text = document.createTextNode("Your answer: "); 
-        div.appendChild(text);
-		var input = document.createElement('input');  
-                input.style.height = "1.4em";
-		input.onkeyup = (function(e){
-			this.value = this.value.toUpperCase();
-		}); 
-		div.appendChild(input);
-		p.parentNode.insertBefore(div, p);
+		var answer_map = new Map(JSON.parse(localStorage.answer_map));
+		if(answer_map) {
+		    var answer_inputs = document.getElementsByClassName('answer_input');
+			for(var i=0; i<answer_inputs.length; i++) {
+				input = answer_inputs[i];
+				var v = answer_map.get(input.id);
+				if(v) {
+					input.value = v;
+				}
+			}
+		}
+	}
+	
+	function resetPageState(){
+		localStorage.answer_map = null;
 		
-		// add reveal answer link
-		var a = document.createElement('a');  
-		var link = document.createTextNode("Reveal Answer"); 
-        a.appendChild(link);    
-		a.href = "#";  
-		a.onclick = (function(e){
-			var link = e.target;
-			answer_p = link.nextSibling;
-			answer_p.style.opacity = 100;
-			e.preventDefault();
+		window.location.reload();
+		/*
+	    var answer_inputs = document.getElementsByClassName('answer_input');
+		for(var i=0; i<answer_inputs.length; i++) {
+			input = answer_inputs[i];
+			input.value = null;
+		}*/
+	}
+	
+	window.onload = (function() {
+		
+		
+		var reset_btn = document.createElement("input");
+		reset_btn.setAttribute("type", "button");
+		reset_btn.value = "RESET";
+		reset_btn.onclick = (function(){
+			if(confirm("Seriously?")) {
+				resetPageState();
+			}
 		});
-		p.parentNode.insertBefore(a, p);
-    }
-});
+		
+		var container = document.getElementById('container');
+		container.insertBefore(reset_btn, container.children[0]);
+		
+		
+		// build page controls, and associate events
+	    var cards = document.getElementsByClassName('exam-question-card');
+	    for(var i=0; i<cards.length; i++) {
+	        var card = cards[i];
+			var answer_p = card.getElementsByClassName("question-answer")[0];
+			// hide answer
+	        answer_p.style.opacity = 0;
+			
+			// add input box
+			var div = document.createElement('div');  
+			var text = document.createTextNode("Your answer: "); 
+	        div.appendChild(text);
+			var input = document.createElement('input');  
+			input.id = "answer_input_" + i;
+			input.classList.add('answer_input'); 
+			input.style.height = "1.4em";
+			input.onkeyup = (function(e){
+				this.value = this.value.toUpperCase();
+			}); 
+			input.onblur = (function(e) {
+				savePageState();
+			});
+		
+			div.appendChild(input);
+			answer_p.parentNode.insertBefore(div, answer_p);
+		
+			// add reveal answer link
+			var a = document.createElement('a');  
+			var link = document.createTextNode("Reveal Answer"); 
+	        a.appendChild(link);    
+			a.href = "#";  
+			a.onclick = (function(e){
+				var link = e.target;
+				answer_p = link.nextSibling;
+				answer_p.style.opacity = 100;
+				e.preventDefault();
+			});
+			answer_p.parentNode.insertBefore(a, answer_p);
+	    }
+		
+		// restore
+		restorePageState();
+	});
 </script>
 </body>
 </html>
