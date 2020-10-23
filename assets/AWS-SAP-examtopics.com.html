@@ -52603,21 +52603,37 @@ body {
 	
 	function resetPageState(){
 		localStorage.answer_map = null;
-		
 		window.location.reload();
-		/*
-	    var answer_inputs = document.getElementsByClassName('answer_input');
-		for(var i=0; i<answer_inputs.length; i++) {
-			input = answer_inputs[i];
-			input.value = null;
-		}*/
 	}
 	
 	window.onload = (function() {
+
+		var container = document.getElementById('container');		
 		
+		// build GOTO controls
+		var goto_input = document.createElement("input");
+		goto_input.id = "goto_input";
+		goto_input.style.height = "1.4em";
+		goto_input.placeholder = "input question number"
+		container.insertBefore(goto_input, container.children[0]);
+
+		var goto_btn = document.createElement("input");
+		goto_btn.setAttribute("type", "button");
+		goto_btn.style.marginRight = "10px";
+		goto_btn.value = "GOTO";
+		goto_btn.onclick = (function(e){
+			var goto_input = document.getElementById("goto_input");
+		    var loc = document.location.toString().split('#')[0];
+		     document.location = loc + '#answer_input_' + (parseInt(goto_input.value) - 1);
+			 e.preventDefault();
+		});
+
+		container.insertBefore(goto_btn, container.children[0]);
 		
+		// build RESET button
 		var reset_btn = document.createElement("input");
 		reset_btn.setAttribute("type", "button");
+		reset_btn.style.marginRight = "20px";
 		reset_btn.value = "RESET";
 		reset_btn.onclick = (function(){
 			if(confirm("Seriously?")) {
@@ -52625,11 +52641,9 @@ body {
 			}
 		});
 		
-		var container = document.getElementById('container');
 		container.insertBefore(reset_btn, container.children[0]);
 		
-		
-		// build page controls, and associate events
+		// build answer controls, associate events
 	    var cards = document.getElementsByClassName('exam-question-card');
 	    for(var i=0; i<cards.length; i++) {
 	        var card = cards[i];
