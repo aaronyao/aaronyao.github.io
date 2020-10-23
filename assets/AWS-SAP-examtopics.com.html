@@ -52613,8 +52613,9 @@ body {
 		// build GOTO controls
 		var goto_input = document.createElement("input");
 		goto_input.id = "goto_input";
+		goto_input.style.width = "50px";
 		goto_input.style.height = "1.4em";
-		goto_input.placeholder = "input question number"
+		goto_input.placeholder = "question #"
 		container.insertBefore(goto_input, container.children[0]);
 
 		var goto_btn = document.createElement("input");
@@ -52643,6 +52644,26 @@ body {
 		
 		container.insertBefore(reset_btn, container.children[0]);
 		
+		var error_answer_btn = document.createElement("input");
+		error_answer_btn.setAttribute("type", "button");
+		error_answer_btn.style.marginRight = "20px";
+		error_answer_btn.value = "CHECK ERROR";
+		error_answer_btn.onclick = (function(){
+			
+			var error_answers = "Error #s:";
+		    var cards = document.getElementsByClassName('exam-question-card');
+		    for(var i=0; i<cards.length; i++) {
+		        var card = cards[i];
+				var answer = card.getElementsByClassName("answer_input")[0].value;
+				var correct_answer = card.getElementsByClassName("correct-answer")[0].innerText;
+				if(answer && correct_answer && answer != correct_answer) {
+					error_answers += "【" + i + "】";
+				}
+			}
+			alert(error_answers);
+		});
+		
+		container.insertBefore(error_answer_btn, container.children[0]);
 		// build answer controls, associate events
 	    var cards = document.getElementsByClassName('exam-question-card');
 	    for(var i=0; i<cards.length; i++) {
@@ -52665,7 +52686,7 @@ body {
 			input.onblur = (function(e) {
 				savePageState();
 			});
-		
+
 			div.appendChild(input);
 			answer_p.parentNode.insertBefore(div, answer_p);
 		
