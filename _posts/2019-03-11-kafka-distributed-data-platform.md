@@ -2,7 +2,7 @@
 layout: post
 title:  "Kafka分布式数据平台"
 categories: Kafka pubsub Streaming
-typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
+typora-root-url: /Users/aaron/Google Drive/blog/aaronyao.github.io
 ---
 [Kafka](https://kafka.apache.org)即可作为系统集成的消息中间件和数据存储系统，提供发布订阅和数据存储能力，也可作为流数据的实时计算平台。
 

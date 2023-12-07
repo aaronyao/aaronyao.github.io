@@ -4,7 +4,7 @@ title:  '分布式一致性'
 categories: 
   - Distributed System
   - Consistency 
-typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
+typora-root-url: /Users/aaron/Google Drive/blog/aaronyao.github.io
 ---
 一切始于大，大量的用户访问，以及随之而来的大量数据存储和计算，让传统单机或All in one架构，无法再通过增加单台硬件配置，来提升性能满足需求。于是只能通过水平切分计算与存储，横向进行扩容，这就有了分布式系统。
 

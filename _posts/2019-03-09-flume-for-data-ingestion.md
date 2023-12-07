@@ -2,7 +2,7 @@
 layout: post
 title:  "Flume数据采集系统"
 categories: Flume Kafka 数据采集
-typora-root-url: /Users/aaron/Google Drive/my/blog/aaronyao.github.io
+typora-root-url: /Users/aaron/Google Drive/blog/aaronyao.github.io
 ---
 
 在进行大数据采集和数据集成时，我们期望有一个统一的工具来收集各种不同的数据源，然后发送到集中存储，[Apache Flume](https://flume.apache.org)就是这样一个强大的数据采集工具。

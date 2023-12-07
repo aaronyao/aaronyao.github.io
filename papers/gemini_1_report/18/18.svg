@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 909 1286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<style type="text/css"><![CDATA[
+.g0_18{
+fill: none;
+stroke: #7F7F7F;
+stroke-width: 1.521;
+stroke-miterlimit: 10;
+}
+.g1_18{
+fill: none;
+stroke: #000;
+stroke-width: 1.326;
+stroke-miterlimit: 10;
+}
+.g2_18{
+fill: none;
+stroke: #000;
+stroke-width: 0.828;
+stroke-miterlimit: 10;
+}
+.g3_18{
+fill: #00F;
+}
+]]></style>
+</defs>
+<path d="M95.3,100.2H814.2" class="g0_18"/>
+<path d="M95.3,337.9h726" class="g1_18"/>
+<path d="M95.3,361h726" class="g2_18"/>
+<image preserveAspectRatio="none" x="104" y="366" width="152" height="114" xlink:href="img/1.jpg"/>
+<path d="M274.2,417.4h7.6v-7.6h-7.6v7.6Z" class="g3_18"/>
+<image preserveAspectRatio="none" x="104" y="495" width="152" height="149" xlink:href="img/2.jpg"/>
+<path d="M274.2,561.7h7.6v-7.6h-7.6v7.6Z" class="g3_18"/>
+<path d="M274.2,671.7h7.6v-7.6h-7.6v7.6Z" class="g3_18"/>
+<image preserveAspectRatio="none" x="104" y="705" width="152" height="114" xlink:href="img/3.jpg"/>
+<path d="M274.2,756.3h7.6v-7.6h-7.6v7.6Z" class="g3_18"/>
+<path d="M95.3,822.6h726" class="g1_18"/>
+<path d="M95.3,1195H814.2" class="g0_18"/>
+</svg>
